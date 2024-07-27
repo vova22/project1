@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
 	padding: 0;
@@ -8,6 +8,7 @@
 
 :root {
 	--index: calc(1vw + 1vh);
+	--p-left: calc(16vw - 80px);
 	--accent: #ED553B;
 	--black: #1F1F1F;
 }
@@ -15,11 +16,6 @@
 @font-face {
 	font-family: montserrat-r;
 	src: url(../fonts/Montserrat-Regular.woff2);
-}
-
-@font-face {
-	font-family: poppins-r;
-	src: url(../fonts/Poppins-Regular.woff2);
 }
 
 @font-face {
@@ -68,5 +64,81 @@
 }
 
 nav {
-	padding: 0 16vw;
+	margin-left: var(--p-left);
+	margin-right: 16vw;
+}
+
+nav>.container .row{
+	display: flex;
+	justify-content: space-between;
+}
+nav>.container .row .col-1, .col-2 {
+	display: inline-flex;
+}
+
+nav .logo {
+	padding: 19px 0;
+
+}
+
+nav #search{
+	display: inline-flex;
+	align-items: center;
+	margin-left: 50px;
+	justify-content: end;
+}
+
+nav #search .search {
+	width: 32vw;
+	height: 45px;
+	font-family: sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	border: none;
+	background-color: #efefef;
+	padding-left: 24px;
+	color: var(--black);
+}
+nav #search .search:focus-visible {
+	outline-color: #bcbcbc;
+}
+nav #search .search::placeholder {
+	color: #bcbcbc;
+	font-weight: 600;
+}
+
+nav #search button {
+	border: none;
+	background: none;
+	position: absolute;
+	margin-right: 24px;
+}
+
+nav .user-data {
+	display: flex;
+	align-items: center;
+}
+nav .user-data ul{
+	display: flex;
+}
+nav .user-data ul>li{
+	display: flex;
+	padding: 0 17px;
+}
+nav .user-data li:nth-child(-n+2){
+	border-right: 1px solid #D1D1D1;
+}
+nav .user-data li:nth-child(3){
+	padding-right: 0;
+}
+nav .user-data ul>li>a{
+	display: flex;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: geometria-r;
+	font-size: 14px;
+	color: var(--black);
+}
+nav .user-data ul>li>a>img{
+	margin-right: 8px;
 }
